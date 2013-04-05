@@ -1,0 +1,10 @@
+body {
+    margin: 30px;
+}
+
+form {
+    margin: 15px 0px;
+}
+form button {
+    display: inline;
+}
