@@ -2,13 +2,12 @@ var munge = function(toMunge) {
     return 'foo' + toMunge;
 };
 
-function newMungePresenter(fn, view) {
-    var fn = fn;
-    var view = view;
+var newMungePresenter = function(fn, view) {
+    var reactToChangedInput = function(input) {
+        view.updateLeftView(fn(input));
+    };
     return {
-        reactToChangedInput: function(input) {
-            view.updateLeft(fn(input));
-        },
+        reactToChangedInput: reactToChangedInput
     };
 };
 

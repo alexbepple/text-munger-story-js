@@ -5,15 +5,15 @@ describe('munge', function() {
 });
 
 describe('MungePresenter', function() {
-    it('updatesLeft', function() {
+    it('updates left view', function() {
         var stubFunction = jasmine.createSpy('calculation').andReturn('bar');
-        var view = jasmine.createSpyObj('', ['updateLeft']);
+        var view = jasmine.createSpyObj('', ['updateLeftView']);
         var presenter = newMungePresenter(stubFunction, view);
 
         presenter.reactToChangedInput('foo');
 
         expect(stubFunction).toHaveBeenCalledWith('foo');
-        expect(view.updateLeft).toHaveBeenCalledWith('bar');
+        expect(view.updateLeftView).toHaveBeenCalledWith('bar');
     });
 });
 

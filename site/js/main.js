@@ -1,7 +1,7 @@
 var view = {
-    updateLeft: function(value) {
+    updateLeftView: function(value) {
         $('#munge-result').text(value);
-    },
+    }
 };
 
 $('#munge-form').submit(function() {
