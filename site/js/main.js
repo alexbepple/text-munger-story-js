@@ -1,6 +1,9 @@
 var view = {
     updateLeftView: function(value) {
         $('#munge-result').text(value);
+    },
+    updateRightView: function(value) {
+        $('#munge-result2').text(value);
     }
 };
 
